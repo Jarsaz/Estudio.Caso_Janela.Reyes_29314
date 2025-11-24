@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Generador de Tabla de Multiplicar - Janela Reyes</title>
+
+    <!-- Bootstrap CSS (según tu estructura: public/vendor/...) -->
+    <link rel="stylesheet" href="public/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="public/css/estilos.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- Encabezado -->
+        <div class="header-section text-center mb-4">
+          <h1 class="fw-bold display-6">Generador de Tabla de Multiplicar</h1>
+          <p class="lead mb-0">Janela Reyes — NRC 29314</p>
+          <small class="text-muted">Usando <code>do...while</code> en JavaScript</small>
+        </div>
+
+        <!-- Tarjeta principal -->
+        <div class="card shadow-lg mb-4 card-dark">
+          <div class="card-body">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-8">
+                <label for="numeroInput" class="form-label visually-hidden">Número</label>
+                <input type="number"
+                       class="form-control form-control-lg"
+                       id="numeroInput"
+                       placeholder="Ingresa un número entero entre 1 y 12"
+                       min="1" max="12" step="1"
+                       aria-describedby="helpNumero">
+              </div>
+
+              <div class="col-md-4">
+                <button class="btn btn-primary btn-lg w-100" id="btnGenerar" type="button">
+                  Generar Tabla
+                </button>
+              </div>
+            </div>
+
+            <!-- Mensaje de alerta -->
+            <div id="alerta" class="alert alert-warning d-none mt-3" role="alert">
+              Por favor, ingresa un número entero entre 1 y 12.
+            </div>
+          </div>
+        </div>
+
+        <!-- Área donde aparecerá la tabla -->
+        <div id="resultados"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (según tu estructura: public/vendor/...) -->
+  <script src="public/vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+  <!-- JS principal -->
+  <script src="public/js/main.js"></script>
+</body>
+</html>
